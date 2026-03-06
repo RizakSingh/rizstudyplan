@@ -4,7 +4,7 @@ const cors = require("cors")
 const authRoutes = require("./routes/auth.routes")
 const studyPlanRoutes = require("./routes/studyPlan.routes")
 const topicRoutes = require("./routes/topic.routes")
-
+const aiRoutes = require("./routes/ai.routes")
 const app = express()
 
 app.use(cors())
@@ -17,5 +17,5 @@ app.get("/", (req,res)=>{
 app.use("/api/auth",authRoutes)
 app.use("/api/studyplans",studyPlanRoutes)
 app.use("/api/topics",topicRoutes)
-
+app.use("/api/ai", aiRoutes)
 module.exports = app

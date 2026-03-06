@@ -46,7 +46,9 @@ Login
 </button>
 
 </div>
-
+<p className="text-center mt-3">
+No account? <a href="/register" className="text-blue-500">Register</a>
+</p>
 </div>
 
 )

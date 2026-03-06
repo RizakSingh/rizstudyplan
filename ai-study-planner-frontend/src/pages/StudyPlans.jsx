@@ -69,7 +69,7 @@ Add
 <div key={plan._id} className="bg-purple-200 p-4 rounded">
 
 <h3 className="font-bold">{plan.subject}</h3>
-<p>Exam: {plan.examDate}</p>
+<p>Exam: {new Date(plan.examDate).toLocaleDateString()}</p>
 
 </div>
 ))}

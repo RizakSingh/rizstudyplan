@@ -1,8 +1,18 @@
 const express = require("express")
 const router = express.Router()
 
-router.get("/", (req,res)=>{
-    res.json({message:"Study plan route working"})
-})
+const protect = require("../middleware/auth.middleware")
+
+const {
+    createStudyPlan,
+    getStudyPlans,
+    deleteStudyPlan
+} = require("../controllers/studyPlan.controller")
+
+router.post("/", protect, createStudyPlan)
+
+router.get("/", protect, getStudyPlans)
+
+router.delete("/:id", protect, deleteStudyPlan)
 
 module.exports = router
